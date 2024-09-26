@@ -4,10 +4,11 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Leções</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">1. El bautismo</a>
-      <a mat-list-item href="#">2</a>
-      <a mat-list-item href="#">3</a>
+
+    <mat-nav-list >
+      @for (lesson of lessons(); track lesson.title; let idx = $index) {
+        <a mat-list-item href="#" (click)="onSelect(idx)">{{ lesson.title }}</a>
+      }
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -21,11 +22,11 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>Cuestionario sobre el Bautismo</span>
+      <span>{{mainMenuService.activeLesson().title }}</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <div>
-      lkdfljkdf lkj
+      <app-lesson1 />
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
