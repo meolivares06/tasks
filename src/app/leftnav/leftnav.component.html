@@ -5,9 +5,9 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Leções</mat-toolbar>
 
-    <mat-nav-list >
+    <mat-nav-list>
       @for (lesson of lessons(); track lesson.title; let idx = $index) {
-        <a mat-list-item href="#" (click)="onSelect(idx)">{{ lesson.title }}</a>
+        <a mat-list-item [activated]="mainMenuService.activeLesson().id === lesson.id" href="#" (click)="onSelect(idx)">{{ lesson.title }}</a>
       }
     </mat-nav-list>
   </mat-sidenav>
@@ -23,10 +23,12 @@
         </button>
       }
       <span>{{mainMenuService.activeLesson().title }}</span>
+
     </mat-toolbar>
     <!-- Add Content Here -->
     <div>
-      <app-lesson1 />
+      <!--<app-lesson1 />-->
+      <ng-container #currentLesson></ng-container>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -17,12 +17,12 @@ import {BaseLessonComponent} from './base-lesson/base-lesson.component';
 
           <div>1. {{ lesson.questions[0].question }}</div>
           <mat-form-field class="full-width">
-            <textarea matInput formControlName="question1"></textarea>
+            <textarea matInput formControlName="question1" placeholder="_________ _________ _________ _________ _________"></textarea>
           </mat-form-field>
 
           <span>2. {{ lesson.questions[1].question }}</span>
-          <mat-form-field class="">
-            <input matInput formControlName="question2" />
+          <mat-form-field class="full-width">
+            <textarea matInput formControlName="question2" ></textarea>
           </mat-form-field>
 
           <div>3. {{ lesson.questions[2].question }}</div>
@@ -32,7 +32,7 @@ import {BaseLessonComponent} from './base-lesson/base-lesson.component';
 
           <div>4. {{ lesson.questions[3].question }}</div>
           <mat-form-field class="full-width">
-            <input matInput formControlName="question4" placeholder="_________ _________ _________ _________"/>
+            <textarea matInput formControlName="question4" placeholder="_________ _________ _________ _________"></textarea>
           </mat-form-field>
 
           <div>5. {{ lesson.questions[4].question }}</div>
@@ -43,16 +43,6 @@ import {BaseLessonComponent} from './base-lesson/base-lesson.component';
           <div>6. {{ lesson.questions[5].question }}</div>
           <mat-form-field class="full-width">
             <textarea matInput formControlName="question6"></textarea>
-          </mat-form-field>
-
-          <div>7. {{ lesson.questions[6].question }}</div>
-          <mat-form-field class="full-width">
-            <textarea matInput formControlName="question7" placeholder=" _________  _________  _________"></textarea>
-          </mat-form-field>
-
-          <div>8. {{ lesson.questions[7].question }}</div>
-          <mat-form-field class="full-width">
-            <textarea matInput formControlName="question8"></textarea>
           </mat-form-field>
 
           <button mat-flat-button (click)="onCheckAnswers($event)">Check Answers</button>
@@ -78,8 +68,8 @@ import {BaseLessonComponent} from './base-lesson/base-lesson.component';
     }
   `]
 })
-export class Lesson1Component extends BaseLessonComponent {
-  override lessonIndex = 1;
+export class Lesson2Component extends BaseLessonComponent {
+  override lessonIndex = 2;
 }
 
 /**
