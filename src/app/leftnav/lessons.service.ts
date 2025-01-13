@@ -80,7 +80,7 @@ const conteudo1 = "<p>O batismo é uma ordenança de Jesus a sua lgreja Mt 28.19
   "8.2.<p>para ser salvo é preciso confessar verbalmente o senhorio de Jesus- Rm 10.9;</p>" +
 
   "8.3.<p>quando nenen, apresentamos a Jesus; assim que aprende a falar, levamos a criança a receber Jesus como Salvador, e quando já sabe discernir entre o certo e o errado, então, pode cumprir com a ordem de Jesus.</p>";
-
+//__________________________________________________________________________________________________________________________________
 const content2 = "<p>A segunda ordenança que Jesus deixou para a lgreja foi a Ceia. Esta ordenança foi instituida pelo Senhor horas antes de sua morte, como um memorial da nova aliança, o novo pacto que Ele estava fazendo com os homens; aliança esta que seria selada com seu próprio sangue Mateus 26.26-28.</p>" +
   "<p>Participar da Ceia é paticipar da nova vida em Cristo.</p>" +
 
@@ -132,6 +132,63 @@ const content2 = "<p>A segunda ordenança que Jesus deixou para a lgreja foi a C
   "<p><strong>5.1. Transubstanciação</strong> - E a transformação literal do pão e vinho em carne e sangue de Jesus. E a forma de celebração da lgreja Catolica Romana. Não cremos desta forma.</p>" +
   "<p><strong>5.2. Consubstanciação</strong> - E a presença espiritual de Jesus na comunhão. A presença de Jesus na comunhão não é fisica, mas espiritual. Algumas igrejas protestantes celebram, crendo dessa forma.</p>" +
   "<p><strong>5.3. Memorial</strong> E comemoração da nossa vitória sobre o pecado e a morte através da morte de Cristo. A presença do Senhor nos elementos (pão e vinho) não ê fisica e nem espiritual. Por isso, nós, Batistas, realizamos a Ceia do Senhor em memória de Jesus, lembrando sempre do que Ele fez para nos dar a tão grande vitória.</p>";
+//__________________________________________________________________________________________________________________________________
+const content3 = "<p>Queremos dar nesta lição respostas a algumas perguntas que são muito frequentes. Entre elas: Qual foi a primeira lgreja? Qual é a verdadeira lgreja?  Por que eu tenho que participar da Igreja? Por que não posso servir a Deus em casa?</p>" +
+  "<p>Vamos, á luz das Escrituras, responder a cada uma destas perguntas:</p>" +
+  "<p><strong>1. Quem fundou a Igreja?</strong></p>" +
+  "<p>A Igreja nasceu no coraçao de Deus e seu fundador foi Jesus Cristo-Mateus 16.18.</p>" +
+  "\n" +
+  "Crsto é a Pedra onde a lgreja toi editicada e não Pedro. O próprio apóstolo\n" +
+  "\n" +
+  "odro reconhece essa verdade em Atos 4.11 e 1 Pedro 2.4-8.\n" +
+  "\n" +
+  "No Antigo Testamento temos o povo de Israel como nação escolhida de\n" +
+  "\n" +
+  "Deus. Deus se revelou a Israel para que lsrael O tornasse conhecido em toda\n" +
+  "\n" +
+  "a Terra.\n" +
+  "\n" +
+  "No Novo Testamento Deus uniu judeus e gentios (todo aquele que não é\n" +
+  "\n" +
+  "judeu é considerado gentio) por meio do sacrificio de Jesus e formou de am-\n" +
+  "\n" +
+  "bos os povos um só povo - Efésios 2.12-16.\n" +
+  "\n" +
+  "Apalavra lgreja vem do grego \"Eklesia\", que significa \"chamados para fora\n" +
+  "\n" +
+  "- indicando que os salvos são chamados para fora do sistema do mundo para\n" +
+  "\n" +
+  "formarem uma nova comunidade.\n" +
+  "\n" +
+  "2. Qual foi a primeira lgreja?\n" +
+  "\n" +
+  "Certamente não foi a de Roma, como argumentam os católicos romanos.\n" +
+  "\n" +
+  "Quando Deus olha para a Terra, Ele não vê igrejas, Ele vė uma lgreja, a Sua\n" +
+  "\n" +
+  "lgreja na Terra.\n" +
+  "\n" +
+  "Como comunidade local, a primeira igreja foi a de Jerusalém, que surgiu\n" +
+  "\n" +
+  "no dia de Pentecostes - Atos 1.12-14 e 2.1. A medida que o Evangelho foi se\n" +
+  "\n" +
+  "espalhando, iam surgindo novas igrejas: Samaria (Atos 8), Cesarėia (Atos\n" +
+  "\n" +
+  "10) e Antioquia da Siria (Atos 11). Depois, as viagens missionárias de Paulo\n" +
+  "\n" +
+  "Contribuiram grandemente para a expansão da lgreja.\n" +
+  "\n" +
+  "A lgreja é constituida de duas partes:\n" +
+  "\n" +
+  "Oe a lerra, e a lgreja triunfante os salvos que jâ partiram com o Senhor.\n" +
+  "\n" +
+  "va verdade, os salvos em Cristo que vivem em obediėncia à Palavra são a\n" +
+  "\n" +
+  "verdadeira lgreja Católica - Universal, Apostólica, isto é, que vive os ensinos\n" +
+  "\n" +
+  "dos apóstolos.\n" +
+  "\n" +
+  "greja militante - os salvos vivos";
 
 @Injectable({
   providedIn: 'root'
@@ -217,7 +274,7 @@ export class LessonsService {
       id: 3,
       title: '3. A igreja',
       questions: [],
-      content: ''
+      content: content3
     },
     {
       id: 4,
