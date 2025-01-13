@@ -7,10 +7,9 @@ import {MatTab, MatTabGroup} from '@angular/material/tabs';
 import {BaseLessonComponent} from './base-lesson/base-lesson.component';
 
 @Component({
-  selector: 'c-lesson1',
-  standalone: true,
-  imports: [MatFormField, MatInputModule, MatButton, ReactiveFormsModule, MatTabGroup, MatTab],
-  template: `
+    selector: 'c-lesson1',
+    imports: [MatFormField, MatInputModule, MatButton, ReactiveFormsModule, MatTabGroup, MatTab],
+    template: `
     <mat-tab-group [mat-stretch-tabs]="false" mat-align-tabs="center">
       <mat-tab label="Tarefas">
         <form class="formLesson" [formGroup]="form">
@@ -63,7 +62,7 @@ import {BaseLessonComponent} from './base-lesson/base-lesson.component';
       </mat-tab>
     </mat-tab-group>
   `,
-  styles: [`
+    styles: [`
     :host {
       display: block;
       box-sizing: border-box;

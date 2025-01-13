@@ -11,10 +11,9 @@ export interface Question {
   userAnswer: string;
 }
 @Component({
-  selector: 'c-lesson4',
-  standalone: true,
-  imports: [MatFormField, MatInputModule, MatButton, ReactiveFormsModule],
-  template: `
+    selector: 'c-lesson4',
+    imports: [MatFormField, MatInputModule, MatButton, ReactiveFormsModule],
+    template: `
     <form class="formLesson" [formGroup]="form">
       <div>{{ questionList.get(1)?.question }}</div>
       <mat-form-field class="full-width">
@@ -29,7 +28,7 @@ export interface Question {
 
     </form>
   `,
-  styles: [`
+    styles: [`
     :host {
       display: block;
       box-sizing: border-box;

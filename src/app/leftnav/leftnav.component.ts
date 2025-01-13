@@ -14,20 +14,19 @@ import {LessonsService} from './lessons.service';
 import {LessonFactoryService} from '../services/lesson-factory.service';
 
 @Component({
-  selector: 'app-leftnav',
-  templateUrl: './leftnav.component.html',
-  styleUrl: './leftnav.component.scss',
-  standalone: true,
-  imports: [
-    Lesson1Component,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    AsyncPipe,
-    JsonPipe,
-  ]
+    selector: 'app-leftnav',
+    templateUrl: './leftnav.component.html',
+    styleUrl: './leftnav.component.scss',
+    imports: [
+        Lesson1Component,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        AsyncPipe,
+        JsonPipe,
+    ]
 })
 export class LeftnavComponent implements OnInit {
   private breakpointObserver = inject(BreakpointObserver);

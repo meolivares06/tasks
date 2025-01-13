@@ -5,11 +5,10 @@ import {LessonsService} from '../../leftnav/lessons.service';
 import {CheckAnswersService} from '../../services/check-answers.service';
 
 @Component({
-  selector: 'app-base-lesson',
-  standalone: true,
-  imports: [],
-  templateUrl: './base-lesson.component.html',
-  styleUrl: './base-lesson.component.scss'
+    selector: 'app-base-lesson',
+    imports: [],
+    templateUrl: './base-lesson.component.html',
+    styleUrl: './base-lesson.component.scss'
 })
 export class BaseLessonComponent implements OnInit {
   lessonsService = inject(LessonsService);
