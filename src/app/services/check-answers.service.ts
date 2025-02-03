@@ -1,23 +1,10 @@
 import { Injectable } from '@angular/core';
 import Groq from 'groq-sdk';
-const groq = new Groq({ apiKey: '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',  dangerouslyAllowBrowser: true});
-// batismo api key:
-//
-//   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
+const groq = new Groq({ apiKey: import.meta.env.NG_APP_API_KEY,  dangerouslyAllowBrowser: true});
 @Injectable({
   providedIn: 'root'
 })
 export class CheckAnswersService {
-
-  constructor() { }
-
-  // async check(value: any) {
-  //   const response = await this.main();
-  //   return response;
-  // }
-
-
-
 
   async main(answer: string) {
     const dataQuestion1 = "A palavra batismo vem do grego baptizo e significa imergir, afundar. somos batistas porque batizamos imergindo as pessoas. O nome batista vem da palavra batismo, e a palavra batismo significa imergir.";
