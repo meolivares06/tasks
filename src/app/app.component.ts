@@ -10,4 +10,8 @@ import { LeftnavComponent } from './leftnav/leftnav.component';
 })
 export class AppComponent {
   title = 'tasks';
+
+  constructor() {
+    console.log('AppComponent', process.env["API_KEY"] || "NO_API_KEY");
+  }
 }

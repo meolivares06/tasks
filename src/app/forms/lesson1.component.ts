@@ -11,6 +11,9 @@ import {BaseLessonComponent} from './base-lesson/base-lesson.component';
     imports: [MatFormField, MatInputModule, MatButton, ReactiveFormsModule, MatTabGroup, MatTab],
     template: `
     <mat-tab-group [mat-stretch-tabs]="false" mat-align-tabs="center">
+      <mat-tab label="Conteudo">
+        <div class="formLesson" [innerHTML]="lesson.content"></div>
+      </mat-tab>
       <mat-tab label="Tarefas">
         <form class="formLesson" [formGroup]="form">
 
@@ -56,9 +59,6 @@ import {BaseLessonComponent} from './base-lesson/base-lesson.component';
 
           <button mat-flat-button (click)="onCheckAnswers($event)">Check Answers</button>
         </form>
-      </mat-tab>
-      <mat-tab label="Conteudo">
-        <div class="formLesson" [innerHTML]="lesson.content"></div>
       </mat-tab>
     </mat-tab-group>
   `,
