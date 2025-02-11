@@ -7,6 +7,7 @@ import { LessonsService } from '../../leftnav/lessons.service';
 import { CheckAnswersService } from '../../services/check-answers.service';
 import { EvaluationResultDialogComponent } from './evaluation-result-dialog/evaluation-result-dialog.component';
 import evaluationAdapter from '../../shared/evaluation.adapter';
+import { LoadingService } from '../../core/services/loading-service.service';
 
 @Component({
   selector: 'app-base-lesson',
@@ -15,6 +16,7 @@ import evaluationAdapter from '../../shared/evaluation.adapter';
   styleUrl: './base-lesson.component.scss',
 })
 export class BaseLessonComponent implements OnInit {
+  loadingService = inject(LoadingService);
   lessonsService = inject(LessonsService);
   checkAnswers = inject(CheckAnswersService);
   readonly dialog = inject(MatDialog);
@@ -39,15 +41,21 @@ export class BaseLessonComponent implements OnInit {
 
   onCheckAnswers(evt: MouseEvent) {
     evt.preventDefault();
+    this.loadingService.show();
     this.checkAnswers
       .main(this.form.value, this.lesson.content, this.lesson.questions)
       .then((r) => {
+        this.loadingService.hide();
         const dialogRef = this.dialog.open(EvaluationResultDialogComponent, {
           maxWidth: '100%',
           height: '80%',
           width: '90%',
           data: { userAnswer: evaluationAdapter(r) },
         });
+      })
+      .catch((e) => {
+        this.loadingService.hide();
+        console.warn(e);
       });
   }
 }

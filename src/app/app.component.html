@@ -1,3 +1,8 @@
 <app-leftnav></app-leftnav>
+@if (loadingService.isLoading) {
+  <div class="overlay">
+    <mat-spinner ></mat-spinner>
+  </div>
+}
 
 <!--router-outlet /-->
