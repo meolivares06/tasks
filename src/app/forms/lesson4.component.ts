@@ -68,6 +68,6 @@ export class Lesson4Component {
   onCheckAnswers(evt: MouseEvent) {
     evt.preventDefault();
     console.warn(this.form.value);
-    this.checkAnswers.main(this.form.value.question1).then(r => console.warn(r));
+    //this.checkAnswers.main(this.form.value.question1).then(r => console.warn(r));
   }
 }

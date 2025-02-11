@@ -12,3 +12,18 @@ export interface Lesson {
   content: string;
   status?: 'complete' | 'incomplete';
 }
+
+export interface InputForAI {
+  question: string;
+  answer: string;
+}
+
+export interface QuestionEvaluation {
+  questionNumber: number;
+  evaluation: number;
+  details: string;
+}
+export interface EvaluationResponse {
+  evaluations: Array<QuestionEvaluation>
+}
+
