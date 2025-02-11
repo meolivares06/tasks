@@ -38,7 +38,7 @@ export class CheckAnswersService {
         {
           role: 'user',
           content:
-            'Evalua que las respuestas sean completas, No es necesario que sean textualmente el contenido, solo que contengan en cada caso los elementos claves. Y siempre explica las causas cuando no se obtubo el maximo de puntos',
+            'Evalua que las respuestas contengan en cada caso los elementos claves del contenido. Y siempre explica las causas cuando no se obtubo el maximo de puntos',
         },
         {
           role: 'user',
@@ -48,7 +48,7 @@ export class CheckAnswersService {
         {
           role: 'user',
           content:
-            'Para la evaluacion crea una escala numerica de 0 a 10. en details menciona una valoracion de la respuesta. Si no hay respuesta la evaluacion es 0. Si la pregunta contiene por que debe ser evaluado tambien',
+            'Para la evaluacion crea una escala numerica de 0 a 10. en details menciona una valoracion de la respuesta con las causas si no se obtuvo el maximo. Si no hay respuesta la evaluacion es 0. Si la pregunta contiene por que debe ser evaluado tambien',
         },
       ],
       // model: 'mixtral-8x7b-32768',
